@@ -21,6 +21,6 @@ public class HashSetCreator {
             }
         }
 
-        return new HashSet(res);
+        return new HashSet<>(res);
     }
 }
