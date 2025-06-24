@@ -6,16 +6,15 @@ import java.util.TreeSet;
 
 public class SubsetOfSquaresCreator {
     public Set<Integer> createSubsetOfSquares(List<Integer> sourceList, int lowerBound, int upperBound) {
-        Set<Integer> res = new TreeSet<>();
-        res.add(lowerBound);
+        TreeSet<Integer> res = new TreeSet<>();
+        
         for (Integer listEl : sourceList) {
             int squareEl = listEl * listEl;
-            if (squareEl < upperBound && squareEl > lowerBound) {
+            if (squareEl >= lowerBound && squareEl <= upperBound) {
                 res.add(squareEl);
-
             }
         }
-        res.add(upperBound);
+        
         return res;
     }
 }
