@@ -15,6 +15,7 @@ public class HashSetCreator {
                     res.add(cur);
                     cur = cur / 2;
                 }
+                res.add(cur);
             } else {
                 res.add(listEl);
                 res.add(2 * listEl);
